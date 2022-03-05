@@ -12,7 +12,7 @@ require('dotenv').config();
 
 const app = express();
 
-const port = 1900;
+const port = process.env.PORT || 3000;
 const url = process.env.DB_URL;
 
 const mongoose = require('mongoose');
