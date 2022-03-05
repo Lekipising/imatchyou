@@ -1234,7 +1234,7 @@ nav {
         width: auto; } }
 
 .p-home {
-  padding-top: 100px;
+  padding-top: 0;
   padding-bottom: 70px;
   min-height: 80vh;
   position: relative;
@@ -1244,13 +1244,14 @@ nav {
       padding-top: 30px; } }
   .p-home__banner {
     width: 100%;
-    padding: 200px 0; }
+    padding: 150px 0;
+  padding-bottom: 200px; }
     @media (max-width: 900px) {
       .p-home__banner {
         padding: 50px 0; } }
     .p-home__banner img {
       position: absolute;
-      transform: translateY(150px);
+      transform: translateY(20px);
       z-index: 1;
       top: 0; }
       @media (max-width: 900px) {

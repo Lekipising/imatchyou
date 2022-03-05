@@ -1,5 +1,5 @@
 .p-home {
-    padding-top: 100px;
+    padding-top: 0;
     padding-bottom: 70px;
     min-height: 80vh;
     position: relative;
@@ -12,7 +12,7 @@
 
     &__banner {
         width: 100%;
-        padding: 200px 0;
+        padding: 150px 0;
 
         @media (max-width: 900px) {
             padding: 50px 0;
@@ -20,7 +20,7 @@
 
         img {
             position: absolute;
-            transform: translateY(150px);
+            transform: translateY(20px);
             z-index: 1;
             top: 0;
 
