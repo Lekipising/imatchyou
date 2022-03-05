@@ -1,20 +1,20 @@
 <div class="m-category">
     <div class="m-category__info">
         <div class="m-category__info__container">
-            <h3 id="weatherHeaderSection" class="m-category__title"></h3>
-            <img id="weatherStatusImage" class="m-category__icon" src="images/cloud-sun.svg" alt="">
-            <span id="viewTemperature" class="m-category__weather-message"></span>
-            <h2 id="weatherStatus" class="m-category__weather-message-2"></h2>
-            <p id="sectionIntroduction" class="m-category__text"></p>
+            <h1 id="weatherHeaderSection" class="m-category__title"><%= user.location.charAt(0).toUpperCase() + user.location.slice(1); %></h1>
+            <h3 id="viewTemperature" class="m-category__weather-message" style="display: flex; align-items: center;">The weather in <span style="font-weight: bold; margin: 0 0.5rem; color: #F8D6D9;"> <%= user.location %> </span> is <span style="margin: 0 0.5rem;"><%= weatherDescription %></span> <img id="weatherStatusImage" src="<%= weatherIconUrl %>" alt=""></h3>
+            <p id="weatherStatus" class="m-category__weather-message-2">This is the perfect weather for <br> <span><%= interests %> <% interestPic %> </span></p>
+            <p id="sectionIntroduction" class="m-category__text"><p><% interestPic %></p></p>
         </div>
     </div>
-    <div id="sectionImage" class="m-category__image" style="background-image: url(/images/boardgames.jpg);">
-    </div>
+    <% if(interests === 'hiking') {%> <div id="sectionImage" class="m-category__image" style="background-image: url(https://res.cloudinary.com/dpnbddror/image/upload/v1646472909/photo-nic-xOigCUcFdA8-unsplash_mmp4ba.webp);">
+    </div> <%   } %>
+    <% if(interests === 'reading') {%> <div id="sectionImage" class="m-category__image" style="background-image: url(https://res.cloudinary.com/dpnbddror/image/upload/v1646473061/thought-catalog-OJZB0VUQKKc-unsplash_fnfmg3.webp);">
+    </div> <%   } %>
 </div>
 
 <div class="m-users">
-    <p class="userLocation"><%= user.location %></p>
-    <h2 id="weatherHeader"></h2>
+    <h2 id="weatherHeader">Users who also like <%= interests %>  in this weather</h2>
     <div class="user-container">
       <% for (let i = 0; i < dataWeather.length; i++) { %>
       <a href="/otherprofile/<%= dataWeather[i].username %>">

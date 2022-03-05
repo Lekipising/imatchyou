@@ -60,7 +60,7 @@ app.use(
 				'https://kit-free.fontawesome.com'
 			],
 			'font-src': ['\'self\'', 'https://fonts.gstatic.com', 'https://kit-free.fontawesome.com', 'http://fonts.gstatic.com', 'http://kit-free.fontawesome.com',],
-			'img-src': ['\'self\'', '*.cloudinary.com'],
+			'img-src': ['\'self\'', '*'],
 		}
 	}),
 	helmet.frameguard({ action: 'deny' }),

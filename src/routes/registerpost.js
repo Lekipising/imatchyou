@@ -1,8 +1,8 @@
 const User = require('../models/user');
 const executeEmail = require('../utils/executeEmail');
 var cloudinary = require('cloudinary').v2;
-
-
+let dotenv = require('dotenv');
+dotenv.config();
 
 cloudinary.config({ 
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME, 
@@ -10,9 +10,6 @@ cloudinary.config({
     api_secret: process.env.CLOUDINARY_SECRET,
     secure: true
   });
-
-
-    
 
 
 const registerpost = (req, res) => {
@@ -24,9 +21,9 @@ const registerpost = (req, res) => {
                 console.log('MongoDB Error:' + err);
             } else if (user) {
                 let mailOptions = {
-                    from: 'Friendship <mfriendshippp@gmail.com>',
+                    from: 'Linka App <mfriendshippp@gmail.com>',
                     to: user.email,
-                    subject: 'Welcome to Friendship, ' + user.firstname + '!',
+                    subject: 'Welcome to Linka App, ' + user.firstname + '!',
                     text: 'Hi ' + user.firstname + '!,\nPlease activate your account by going to this url: http://' + req.get('host') + '/activate?id=' + user._id
                 };
                 executeEmail(mailOptions);
@@ -64,6 +61,8 @@ const registerpost = (req, res) => {
         })
         .then(function () {
           console.log('** photo saved');
+        }).catch(function (err) {
+            console.log(err);
         });
     };
         

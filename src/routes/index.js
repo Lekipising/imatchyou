@@ -26,6 +26,10 @@ const index = async (req, res) => {
       const json = await fetchResponse.json();
       console.log('weather data', json);
       const temperature = json.main.temp;
+      const weatherDescription = json.weather[0].description;
+      // get weather icon in png
+      const weatherIcon = json.weather[0].icon;
+      const weatherIconUrl = 'http://openweathermap.org/img/wn/' + weatherIcon + '@2x.png';
 
       // If the weather is good show sports. In this case Mountainbike
 
@@ -43,7 +47,7 @@ const index = async (req, res) => {
       console.log('weather is ', temperature);
       if (temperature > 19) {
         const dataWeather = await User.find({
-          interests: 'hike' // Looks in all data for people that have mountainbike in their interests
+          interests: 'hiking' // Looks in all data for people that have mountainbike in their interests
         });
         console.log('dataWeather', dataWeather);
         const done = (allData, myData, dataBG, dataComics, dataWeather) => {
@@ -52,17 +56,22 @@ const index = async (req, res) => {
           let dataBGFiltered = filteredData(dataBG);
           let dataComicsFiltered = filteredData(dataComics);
           let dataWeatherFiltered = filteredData(dataWeather);
-          console.log('SENDING THIS ', allDataFiltered);
+          let pic = 'https://res.cloudinary.com/dpnbddror/image/upload/v1646472909/photo-nic-xOigCUcFdA8-unsplash_mmp4ba.png';
+          console.log('SENDING THIS ', pic);
           res.render('index', {
             user: myData,
             data: allDataFiltered,
             dataBG: dataBGFiltered,
             dataComics: dataComicsFiltered,
-            dataWeather: dataWeatherFiltered
+            dataWeather: dataWeatherFiltered,
+            weatherDescription: weatherDescription,
+            interests: 'hiking',
+            weatherIconUrl: weatherIconUrl,
+            interestPic: pic
 
           });
         };
-
+        
         done(allData, myData, dataBG, dataComics, dataWeather);
 
         // If the weather is not so good: show games.
@@ -96,7 +105,11 @@ const index = async (req, res) => {
             data: allDataFiltered,
             dataBG: dataBGFiltered,
             dataComics: dataComicsFiltered,
-            dataWeather: dataWeatherFiltered
+            dataWeather: dataWeatherFiltered,
+            weatherDescription: weatherDescription,
+            interests: 'reading',
+            weatherIconUrl: weatherIconUrl,
+            interestPic: 'https://res.cloudinary.com/dpnbddror/image/upload/v1646473061/thought-catalog-OJZB0VUQKKc-unsplash_fnfmg3.webp'
 
           });
         };

@@ -858,6 +858,12 @@ nav {
       @media (max-width: 940px) {
         .m-category__weather-message-2 {
           font-size: 30px; } }
+          .m-category__weather-message span {
+            font-weight: 700 !important;
+          }
+          .m-category__weather-message-2 span {
+            font-weight: 700 !important;
+          }
   .m-category__icon {
     width: 50px;
     display: inline-block;
