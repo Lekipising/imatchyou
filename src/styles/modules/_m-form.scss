@@ -1,0 +1,186 @@
+.m-form {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 770px;
+    padding: 70px;
+    color: $purple;
+    background-color: $white;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 17.5px;
+    -webkit-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.15);
+
+    @media (max-width: 520px) {
+        padding: 50px;
+    }
+
+    p {
+        line-height: 30px;
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        margin-top: 30px;
+    }
+
+    legend {
+        font-family: 'Playfair Display';
+        font-weight: bold;
+        font-size: 44px;
+        margin-bottom: 25px;
+    }
+
+    input,
+    textarea {
+        padding: 10px;
+        height: 30px;
+        margin-top: 10px;
+        display: block;
+        width: 310px;
+        border: 0;
+        background-color: transparent;
+        border-bottom: 1px solid $grey;
+
+        &:focus {
+            outline: 0;
+            border-bottom: 2px solid $purple;
+        }
+
+        &[type="file"] {
+            display: none;
+        }
+
+        @media (max-width: 520px) {
+            width: 100%;
+        }
+    }
+
+    button {
+        font-family: 'Montserrat';
+        margin-top: 30px;
+        width: 120px;
+        height: 50px;
+        border-radius: 6px;
+        color: $white;
+        background-color: $purple;
+        border: 3px solid $purple;
+        transition: all 200ms ease-in-out;
+
+        &:hover {
+            background-color: $white;
+            color: $purple;
+            cursor: pointer;
+        }
+    }
+
+    .upload-label {
+        font-family: 'Montserrat';
+        font-weight: normal;
+        text-align: center;
+        padding-top: 12px;
+        padding-left: 25px;
+        width: 200px;
+        height: 50px;
+        border-radius: 6px;
+        color: $purple;
+        background-color: $white;
+        border: 3px solid $purple;
+        transition: all 200ms ease-in-out;
+        margin-top: 35px;
+
+        &:hover {
+            color: $white;
+            background-color: $purple;
+            cursor: pointer;
+        }
+
+        &::before {
+            position: absolute;
+            content: '+';
+            font-size: 35px;
+            font-weight: bold;
+            transform: translate(-30px, -10px);
+            z-index: 1;
+        }
+    }
+
+    textarea {
+        height: 150px;
+        resize: none;
+    }
+
+    .tag-container {
+        max-width: 400px;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        .tag {
+            height: 40px;
+            border: 1px solid $purple;
+            border-radius: 6px;
+            margin: 15px 5px 0px;
+            padding: 3px 10px 10px;
+            display: block;
+
+            p {
+                margin-left: 10px;
+                cursor: pointer;
+                display: inline;
+            }
+
+            &:last-of-type {
+                margin-right: 40px;
+            }
+        }
+
+        input {
+            left: 0;
+        }
+    }
+
+    #signupInterests {
+        display: none;
+    }
+
+    .login-failed {
+        display: none;
+    }
+
+    .upload-text {
+        font-size: 15px;
+        margin-top: 5px;
+    }
+
+    .error-message {
+        display: block;
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: lighter;
+        color: red;
+    }
+
+    .no-error-message {
+        display: none;
+    }
+
+    .sign-up--failed {
+        display: none;
+    }
+
+    .form-error-message {
+        margin-top: 5px;
+        display: block;
+        font-size: 16px;
+        font-weight: lighter;
+        color: red;
+
+        span {
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,44 @@
+<%- include('partials/shared/html-open.ejs'); %>
+<%- include('partials/globals/header.ejs'); %>
+
+<main>
+    <div class="p-other-profile">
+
+        <% if(locals.matchData == true) {%>
+        <div class="match-lightbox">
+            <h2>It's a match!</h2>
+            <p>You and <%= data.firstname %> have liked each other. Send an email by clicking on the button below!
+            </p>
+        </div>
+        <%   } %>
+
+        <form class="m-form" <% if (locals.match) { %> action="/unmatch" <% } else { %> action="/like" <% } %>
+            method="POST">
+            <legend><%= data.firstname %>'s profile</legend>
+            <div class="p-profile__avatar" style="background-image: url(<%= data.avatar %>)">
+            </div>
+            <label class="edit-label" for="editUser">Username</label>
+            <p><%= data.username %></p>
+            <label class="edit-label" for="editLocation">Location</label>
+            <p><%= data.location %></p>
+            <label class="edit-label" for="editInterests">Interests</label>
+            <div class="tag-container tag-container-profile">
+                <% for (let i = 0; i < data.interests.length; i++) { %>
+                <div class="tag"><span class="interestitem"><%= data.interests[i] %></span>
+                    <p class="close-button" data-item="<%= data.interests[i] %>">x</p>
+                </div>
+                <% } %>
+            </div>
+            <label class="edit-label" for="editDescription">Description</label>
+            <p><%= data.description %></p>
+            <% if (locals.match) { %>
+            <button name="unmatch" type="submit" value="<%=data._id%>">Unmatch</button>
+            <a href="mailto:<%=data.email %>">Send an email</a>
+            <% } else { %>
+            <button name="like" type="submit" value="<%=data._id%>">Like</button>
+            <% } %>
+        </form>
+    </div>
+</main>
+
+<%- include('partials/shared/html-close.ejs'); %>

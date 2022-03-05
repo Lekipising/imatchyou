@@ -1,0 +1,117 @@
+<%- include('partials/shared/html-open.ejs'); %>
+<%- include('partials/globals/header.ejs'); %>
+
+<main>
+    <section class="p-register">
+        <div>
+            <form class="m-form" id="sign-up_form" action="/register" method="POST" enctype="multipart/form-data">
+                <% if(locals.data){ %>
+                <legend>Register</legend>
+                <p>Create an account to meet new people and get new awesome friendships.</p>
+                <span class="sign-up--failed">The username <span class="takenUsername"><%= data.signupUser %></span> is
+                    already taken, please choose a
+                    different one.</span>
+                <span id="form-error-message" class="no-error-message">Please check if you have (correctly)
+                    filled in all fields.</span>
+                <label for="signupFirst">First name</label>
+                <input class="no-error" type="text" name="signupFirst" id="signupFirst" placeholder="First name"
+                    value="<%= data.signupFirst %>">
+                <span class="no-error-message"></span>
+                <label for="signupAge">Date of birth (DD/MM/YYYY)</label>
+                <input class="no-error" type="text" name="signupAge" id="signupAge" placeholder="Date of birth"
+                    value="<%= data.signupAge %>">
+                <span class="no-error-message"></span>
+                <label for="signupLocation">Location</label>
+                <input class="no-error" type="text" name="signupLocation" id="signupLocation" placeholder="Location"
+                    value="<%= data.signupLocation %>">
+                <span class="no-error-message"></span>
+                <label for="signupInterests">Interests<span class="interest-info">i</span></label>
+                <div class="tag-container">
+                    <input id="signupInterestsInput" placeholder="Interests" onkeydown="return event.key != 'Enter';" />
+                </div>
+                <input type="text" name="signupInterests" id="signupInterests" placeholder="Interests"
+                    value="<%= data.signupInterests %>">
+                    <div class="tag-button">Add tag</div>
+                <span class="no-error-message"></span>
+                <label for="signupDescription">Description</label>
+                <textarea name="signupDescription" id="signupDescription"
+                    placeholder="Description"><%= data.signupDescription %></textarea>
+                <span class="no-error-message"></span>
+                <label for="signupAvatar" class="upload-label">Upload avatar</label>
+                <p id="fileInfoText" class="upload-text"></p>
+                <input type="file" name="signupAvatar" id="signupAvatar" accept="image/*">
+                <span class="no-error-message"></span>
+                <label for="signupUser">Username</label>
+                <input class="no-error" type="text" name="signupUser" id="signupUser" placeholder="Username"
+                    value="<%= data.signupUser %>">
+                <span class="no-error-message"></span>
+                <label for="signupEmail">E-mail adress</label>
+                <input class="no-error" type="text" name="signupEmail" id="signupEmail" placeholder="E-mail adress"
+                    value="<%= data.signupEmail %>">
+                <span class="no-error-message"></span>
+                <label for="signupPassword">Password</label>
+                <input class="no-error" type="password" name="signupPassword" id="signupPassword"
+                    placeholder="Password">
+                <span class="no-error-message"></span>
+                <label for="signupPasswordRepeat">Repeat password</label>
+                <input class="no-error" type="password" name="signupPasswordRepeat" id="signupPasswordRepeat"
+                    placeholder="Repeat password">
+                <span class="no-error-message"></span>
+                <button form="sign-up_form" type="submit" value="submit">
+                    Sign Up
+                </button>
+                <% } else{ %>
+                <legend>Register</legend>
+                <p>Create an account to meet new people and get new awesome friendships.</p>
+                <span class="sign-up--failed">The username <span class="takenUsername"></span> is already taken, please
+                    choose a
+                    different one.</span>
+                <span id="form-error-message" class="no-error-message">Please check if you have (correctly)
+                    filled in all fields.</span>
+                <label for="signupFirst">First name</label>
+                <input class="no-error" type="text" name="signupFirst" id="signupFirst" placeholder="First name">
+                <span class="no-error-message"></span>
+                <label for="signupAge">Date of birth (DD/MM/YYYY)</label>
+                <input class="no-error" type="text" name="signupAge" id="signupAge" placeholder="Date of birth">
+                <span class="no-error-message"></span>
+                <label for="signupLocation">Location</label>
+                <input class="no-error" type="text" name="signupLocation" id="signupLocation" placeholder="Location">
+                <span class="no-error-message"></span>
+                <label for="signupInterests">Interests<span class="interest-info">i</span></label>
+                <div class="tag-container">
+                    <input id="signupInterestsInput" placeholder="Interests" onkeydown="return event.key != 'Enter';" />
+                </div>
+                <input type="text" name="signupInterests" id="signupInterests" placeholder="Interests">
+                <div class="tag-button">Add tag</div>
+                <span class="no-error-message"></span>
+                <label for="signupDescription">Description</label>
+                <textarea name="signupDescription" id="signupDescription" placeholder="Description"></textarea>
+                <span class="no-error-message"></span>
+                <label for="signupAvatar" class="upload-label">Upload avatar</label>
+                <p id="fileInfoText" class="upload-text"></p>
+                <input type="file" name="signupAvatar" id="signupAvatar" accept="image/*">
+                <span class="no-error-message"></span>
+                <label for="signupUser">Username</label>
+                <input class="no-error" type="text" name="signupUser" id="signupUser" placeholder="Username">
+                <span class="no-error-message"></span>
+                <label for="signupEmail">E-mail adress</label>
+                <input class="no-error" type="text" name="signupEmail" id="signupEmail" placeholder="E-mail adress">
+                <span class="no-error-message"></span>
+                <label for="signupPassword">Password</label>
+                <input class="no-error" type="password" name="signupPassword" id="signupPassword"
+                    placeholder="Password">
+                <span class="no-error-message"></span>
+                <label for="signupPasswordRepeat">Repeat password</label>
+                <input class="no-error" type="password" name="signupPasswordRepeat" id="signupPasswordRepeat"
+                    placeholder="Repeat password">
+                <span class="no-error-message"></span>
+                <button form="sign-up_form" type="submit" value="submit">
+                    Sign Up
+                </button>
+                <% } %>
+            </form>
+        </div>
+    </section>
+</main>
+
+<%- include('partials/shared/html-close.ejs'); %>

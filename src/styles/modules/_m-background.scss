@@ -1,0 +1,72 @@
+.m-background {
+    background: #ffe7df;
+    background: -moz-linear-gradient(top, #ffe7df 0%, #f8d4d9 100%);
+    background: -webkit-linear-gradient(top, #ffe7df 0%, #f8d4d9 100%);
+    background: linear-gradient(to bottom, #ffe7df 0%, #f8d4d9 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffe7df', endColorstr='#f8d4d9', GradientType=0);
+    background-attachment: fixed;
+    z-index: -1;
+
+    &__container {
+        display: block;
+
+        @media (max-width: 600px) {
+            display: none;
+        }
+    }
+
+    .blob-1 {
+        fill: #FFFBEA;
+        width: auto;
+        height: 800px;
+        opacity: .3;
+        position: absolute;
+        right: -100px;
+        top: -50px;
+    }
+
+    .blob-2 {
+        fill: #FFFBEA;
+        width: 500px;
+        height: 800px;
+        opacity: .3;
+        position: absolute;
+        left: 30%;
+        top: 700px;
+    }
+
+    .blob-3 {
+        fill: #FFFBEA;
+        width: 500px;
+        height: 800px;
+        opacity: .3;
+        position: absolute;
+        left: 70%;
+        top: 800px;
+    }
+
+    .blob-4 {
+        fill: #FFFBEA;
+        width: auto;
+        height: 800px;
+        opacity: .3;
+        position: absolute;
+        left: -120px;
+    }
+
+    .logo-1 {
+        position: absolute;
+        left: 0;
+        top: 500px;
+        z-index: 1;
+        max-width: 100%;
+    }
+
+    .logo-2 {
+        position: absolute;
+        right: 0;
+        top: 1000px;
+        z-index: 1;
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,94 @@
+.m-users {
+    background-color: $white;
+    margin: 100px auto;
+    max-width: 1000px;
+    padding: 80px;
+    width: 100%;
+    border-radius: 12px;
+
+    @media (max-width: 1000px) {
+        border-radius: 0;
+        padding: 40px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    h2 {
+        font-family: 'Playfair Display';
+        font-weight: bold;
+        font-size: 40px;
+    }
+
+    p {
+        font-family: 'Montserrat';
+        font-size: 20px;
+        max-width: 600px;
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .user-container {
+        max-width: 900px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .user {
+        width: 250px;
+        height: 300px;
+        border-radius: 6px;
+        margin: 24px 12px;
+        display: inline-block;
+        position: relative;
+        -webkit-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.15);
+        box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+
+        @media (max-width: 700px) {
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        &:hover .user__image {
+            transform: scale(1.1);
+        }
+
+        &__image {
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            transition: all 400ms ease-in-out;
+        }
+
+        h4 {
+            color: $white;
+            text-decoration: none;
+            position: absolute;
+            bottom: 0;
+            left: 20px;
+            font-family: 'Montserrat';
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        P {
+            color: $white;
+            text-decoration: none;
+            position: absolute;
+            bottom: -30px;
+            left: 20px;
+            font-family: 'Montserrat';
+            font-size: 15px;
+        }
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+}

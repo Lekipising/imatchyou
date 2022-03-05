@@ -1,0 +1,177 @@
+.p-profile {
+    width: 100%;
+    padding: 50px 30px;
+    min-height: 80vh;
+    position: relative;
+    z-index: 1;
+
+    &__avatar {
+        position: absolute;
+        width: 350px;
+        height: 400px;
+        background-position: center;
+        background-size: cover;
+        transform: translate(-400px, -70px);
+        border-radius: 6px;
+        -webkit-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.15);
+        box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.15);
+
+        @media (max-width: 1080px) {
+            position: relative;
+            transform: translate(0);
+            width: 100%;
+            height: 300px;
+        }
+    }
+
+    .tag-button {
+        font-family: 'Montserrat';
+        font-weight: lighter;
+        margin-top: 30px;
+        width: 120px;
+        height: 50px;
+        border-radius: 6px;
+        color: $white;
+        background-color: $purple;
+        border: 3px solid $purple;
+        transition: all 200ms ease-in-out;
+        text-align: center;
+        padding-top: 10px;
+        display: none;
+
+        &:hover {
+            background-color: $white;
+            color: $purple;
+            cursor: pointer;
+        }
+
+        @media (min-width: 750px) {
+            display: none;
+        }
+    }
+
+    .edit-label {
+        font-size: 25px;
+    }
+
+    .upload-label {
+        display: none;
+    }
+
+    #signupAvatar {
+        display: none;
+    }
+
+    input, textarea {
+        display: none;
+    }
+
+    .tag-container-profile {
+        .tag {
+            padding-top: 8px;
+            p {
+                display: none;
+            }
+        }
+    }
+
+    &__edit {
+        .profile__edit__form {
+            input, textarea {
+                display: block;
+            }
+    
+            p {
+                display: none;
+            }
+
+            .upload-label {
+                display: block;
+            }
+        }
+
+        .tag-container-profile {
+            .tag {
+                padding-top: 4px;
+                p {
+                    display: inline;
+                }
+            }
+        }
+
+        .tag-button {
+            display: block;
+
+            @media (min-width: 750px) {
+                display: none;
+            }
+        }
+
+        #fileInfoText {
+            display: block;
+        }
+    }
+
+    #editInterests{
+        display: none;
+    }
+
+    button {
+        display: none;
+        width: 180px;
+    }
+
+    .save-button {
+        display: block;
+    }
+
+    .profile__edit {
+        font-family: 'Montserrat';
+        font-weight: lighter;
+        margin-top: 30px;
+        width: 180px;
+        height: 50px;
+        border-radius: 6px;
+        color: $white;
+        background-color: $purple;
+        border: 3px solid $purple;
+        transition: all 200ms ease-in-out;
+        text-align: center;
+        padding-top: 12px;
+        padding-left: 25px;
+
+        &:hover {
+            background-color: $white;
+            color: $purple;
+            cursor: pointer;
+
+            svg {
+                fill: $purple;
+            }
+        }
+
+        svg {
+            width: 30px;
+            height: 30px;
+            fill: $white;
+            position: absolute;
+            transform: translate(-40px, -12px);
+            transition: all 200ms ease-in-out;
+        }
+    }
+
+    .edit-active {
+        display: none;
+    }
+
+    form {
+        padding-left: 200px;
+        width: 600px;
+
+        @media (max-width: 1080px) {
+            padding-left: 70px;
+            width: auto;
+        }
+    }
+}

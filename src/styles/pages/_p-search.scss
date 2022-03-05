@@ -1,0 +1,16 @@
+.p-search {
+    width: 100%;
+    padding: 50px 30px;
+    min-height: 80vh;
+    position: relative;
+    z-index: 1;
+
+    .m-users {
+        padding: 80px;
+        border-radius: 12px;
+
+        @media (max-width: 1000px) {
+            padding: 20px 40px;
+        }
+    }
+}

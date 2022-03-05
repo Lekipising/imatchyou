@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="389px" height="539px" viewBox="0 0 389 539" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Mask 🌈ease-out;lrgb;23</title>
+    <defs>
+        <linearGradient x1="-22.2970592%" y1="48.5410108%" x2="53.6992803%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#FFE1DD" offset="0%"></stop>
+            <stop stop-color="#FFE0DD" stop-opacity="0.996078431" offset="0.6667072%"></stop>
+            <stop stop-color="#FFDEDB" stop-opacity="0.992156863" offset="1.38241923%"></stop>
+            <stop stop-color="#FEDBD9" stop-opacity="0.980392157" offset="3.04789632%"></stop>
+            <stop stop-color="#FED7D6" stop-opacity="0.968627451" offset="5.30728775%"></stop>
+            <stop stop-color="#FDD2D3" stop-opacity="0.952941176" offset="8.11889557%"></stop>
+            <stop stop-color="#FDCCCF" stop-opacity="0.937254902" offset="11.4410218%"></stop>
+            <stop stop-color="#FCC5CB" stop-opacity="0.917647059" offset="15.2319684%"></stop>
+            <stop stop-color="#FBBDC6" stop-opacity="0.894117647" offset="19.4500376%"></stop>
+            <stop stop-color="#FBB4C0" stop-opacity="0.870588235" offset="24.0535312%"></stop>
+            <stop stop-color="#FAAABA" stop-opacity="0.847058824" offset="29.0007513%"></stop>
+            <stop stop-color="#F9A0B4" stop-opacity="0.823529412" offset="34.25%"></stop>
+            <stop stop-color="#F895AE" stop-opacity="0.8" offset="39.7595793%"></stop>
+            <stop stop-color="#F789A8" stop-opacity="0.776470588" offset="45.4877911%"></stop>
+            <stop stop-color="#F77DA1" stop-opacity="0.756862745" offset="51.3929376%"></stop>
+            <stop stop-color="#F6709B" stop-opacity="0.733333333" offset="57.4333208%"></stop>
+            <stop stop-color="#F56295" stop-opacity="0.71372549" offset="63.5672427%"></stop>
+            <stop stop-color="#F5548F" stop-opacity="0.694117647" offset="69.7530053%"></stop>
+            <stop stop-color="#F4468A" stop-opacity="0.682352941" offset="75.9489106%"></stop>
+            <stop stop-color="#F43785" stop-opacity="0.666666667" offset="82.1132607%"></stop>
+            <stop stop-color="#F32982" stop-opacity="0.658823529" offset="88.2043576%"></stop>
+            <stop stop-color="#F31D80" stop-opacity="0.650980392" offset="94.1805034%"></stop>
+            <stop stop-color="#F3177F" stop-opacity="0.650980392" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-99.000000, -176.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <path d="M436.678082,308.688262 C468.09441,359.977691 484.092736,407.0825 484.650631,455.029782 C485.208527,502.977065 469.941792,551.381848 438.092381,597.15399 C406.244695,642.539432 357.81606,684.905534 290.970024,703.379157 C224.123989,721.85278 139.246478,716.432197 111.661789,671.312691 C84.0771002,626.193186 113.786958,540.988058 113.39643,455.530925 C113.391826,370.072066 83.674486,283.972776 111.690533,232.41741 C139.706581,180.862045 225.84194,163.848877 292.134684,182.886831 C358.425702,202.311484 405.261755,257.398833 436.678082,308.688262 Z" id="Mask-🌈ease-out;lrgb;23" transform="translate(292.165379, 444.318618) scale(-1, 1) rotate(-1.000000) translate(-292.165379, -444.318618) "></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,27 @@
+<section class="loginUser">
+
+    <div class="p-login__form">
+        <form class="m-form" id="login_form" action="/login" method="POST">
+            <legend>Login</legend>
+            <% if (locals.message) { %>
+            <span class="form-error-message "><%= message %></span>
+            <% } %>
+            <span class="login-failed">Your e-mail adress or password is incorrect or you have to activate your email
+                adress by clicking on the link in the email we have sent you.</span>
+            <span id="login-error-message" class="no-error-message">Please check if you have (correctly) filled in
+                all fields.</span>
+            <label for="loginEmail">E-mail adress</label>
+            <input class="no-error" type="text" name="loginEmail" id="loginEmail" placeholder="E-mail adress"
+                <% if (locals.data) { %> value="<%= data.loginEmail %>" <% } %>>
+            <span class="no-error-message"></span>
+            <label for="loginPassword">Password</label>
+            <input class="no-error" type="password" name="loginPassword" id="loginPassword" placeholder="Password">
+            <span class="no-error-message"></span>
+            <button form="login_form" type="submit" class="">
+                Log In
+            </button>            
+        </form>
+    </div>
+
+
+</section>

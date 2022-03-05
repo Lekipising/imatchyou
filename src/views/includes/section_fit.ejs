@@ -1,0 +1,20 @@
+<div class="m-users">
+    <h2>These people share your interests</h2>
+    <div class="user-container">
+        <% for (let i = 0; i < dataEqual.length; i++) { %>
+        <div class="user">
+            <a href="#0">
+                <div class="user__image"
+                    style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.35)), url(<%= dataEqual[i].avatar %>)">
+                </div>
+                <h4>
+                    <%= dataEqual[i].firstname %>
+                </h4>
+                <p>
+                    <%= dataEqual[i].location %>
+                </p>
+            </a>
+        </div>
+        <% } %>
+    </div>
+</div>

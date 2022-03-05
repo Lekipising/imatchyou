@@ -1,0 +1,16 @@
+<%- include('partials/shared/html-open.ejs'); %>
+<%- include('partials/globals/header.ejs'); %>
+
+<main>
+    <div class="p-login">
+        <div class="p-login__banner">
+            <h1>The first app that is designed to make new friendships</h1>
+            <a href="/register">
+                <button>Register</button>
+            </a>
+        </div>
+        <%- include('includes/login-user.ejs'); %>
+    </div>
+</main>
+
+<%- include('partials/shared/html-close.ejs'); %>

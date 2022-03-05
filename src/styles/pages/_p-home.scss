@@ -1,0 +1,121 @@
+.p-home {
+    padding-top: 100px;
+    padding-bottom: 70px;
+    min-height: 80vh;
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: 900px) {
+        padding-top: 30px;
+    }
+
+
+    &__banner {
+        width: 100%;
+        padding: 200px 0;
+
+        @media (max-width: 900px) {
+            padding: 50px 0;
+        }
+
+        img {
+            position: absolute;
+            transform: translateY(150px);
+            z-index: 1;
+            top: 0;
+
+            @media (max-width: 900px) {
+                display: none;
+            }
+        }
+
+        &__container {
+            margin: 0 auto;
+            max-width: 1000px;
+            width: 100%;
+            display: flex;
+
+            @media (max-width: 900px) {
+                display: block;
+            }
+        }
+
+        &__left {
+            border-right: 1px solid $purple;
+            width: 60%;
+
+            @media (max-width: 900px) {
+                margin: 0 auto;
+                width: 80%;
+                border-bottom: 1px solid $purple;
+                border-right: 0;
+                padding-bottom: 30px;
+            }
+
+            h1 {
+                width: 500px;
+                margin: 0 0 0 auto;
+                font-family: 'Playfair Display';
+                font-weight: bold;
+                font-size: 60px;
+                position: relative;
+                z-index: 2;
+
+                @media (max-width: 900px) {
+                    width: 100%;
+                }
+            }
+        }
+
+        &__right {
+            width: 40%;
+            padding-left: 50px;
+            
+            @media (max-width: 900px) {
+                margin: 0 auto;
+                width: 80%;
+                padding-left: 0;
+                padding-top: 30px;
+            }
+
+            h2 {
+                width: 300px;
+                margin: 0 auto 0 0;
+                font-family: 'Montserrat';
+                font-size: 40px;
+
+                @media (max-width: 900px) {
+                    width: 100%;
+                    font-size: 26px;
+                }
+            }
+        }
+
+        button {
+            font-family: 'Montserrat';
+            padding: 0 20px;
+            font-size: 25px;
+            margin-top: 30px;
+            height: 50px;
+            border-radius: 6px;
+            color: $purple;
+            background-color: transparent;
+            border: 3px solid $purple;
+            transition: all 200ms ease-in-out;
+    
+            &:hover {
+                background-color: $purple;
+                color: $white;
+                cursor: pointer;
+            }
+
+            @media (max-width: 900px) {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .userLocation {
+        display: none;
+    }
+}

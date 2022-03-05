@@ -1,0 +1,36 @@
+<%- include('partials/shared/html-open.ejs'); %>
+<%- include('partials/globals/header.ejs'); %>
+
+<main>
+  <div class="p-home">
+    <div class="p-home__banner">
+      <div class="p-home__banner__container">
+        <div class="p-home__banner__left">
+          <h1>Look at other people with the same interests!</h1>
+          <img src="/images/blob-main.svg" alt="">
+        </div>
+        <div class="p-home__banner__right">
+          <% if (locals.user) { %>
+          <h2>Check who you have already matched with!</h2>
+          <a href="/matches">
+            <button>My matches</button>
+          </a>
+          <% } else { %>
+          <h2>Create an account to get started!</h2>
+          <a href="/register">
+            <button>Register</button>
+          </a>
+          <% } %>
+        </div>
+      </div>
+    </div>
+
+    <%- include('includes/section_users.ejs'); %>
+
+    <% if (locals.user) { %>
+    <%- include('includes/section_weather.ejs'); %>
+    <% } %>
+  </div>
+</main>
+
+<%- include('partials/shared/html-close.ejs'); %>

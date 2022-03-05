@@ -1,0 +1,70 @@
+<header>
+
+    <nav>
+        <a href="/"><img src="/images/friendship-logo.png" alt="Logo Friendship"></a>
+        <div class="nav-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-mobile">
+            <ul>
+                <li><a href="/">
+                        Home
+                    </a></li>
+                <li><a href="/profile">
+                        My profile
+                    </a></li>
+                <li><a href="/matches">
+                        Matches
+                    </a></li>
+                <li><a href="/search">
+                        Search
+                    </a></li>
+                <% if (locals.user) { %>
+                <li><a href="/logout">
+                        Log out
+                    </a></li>
+                <% } else { %>
+                <li><a href="/login">
+                        Log in
+                    </a></li>
+                <li><a href="/register">
+                        Register
+                    </a></li>
+                <% } %>
+            </ul>
+        </div>
+
+        <div class="nav-desktop">
+            <ul>
+                <li><a href="/">
+                        Home
+                    </a></li>
+                <li><a href="/profile">
+                        My profile
+                    </a></li>
+                <li><a href="/matches">
+                        Matches
+                    </a></li>
+                <li><a href="/search">
+                        Search
+                    </a></li>
+                <% if (locals.user) { %>
+                <li><a href="/logout">
+                        Log out
+                    </a></li>
+                <% } else { %>
+                <li><a href="/login">
+                        Log in
+                    </a></li>
+                <li><a href="/register">
+                        Register
+                    </a></li>
+                <% } %>
+            </ul>
+        </div>
+    </nav>
+
+</header>

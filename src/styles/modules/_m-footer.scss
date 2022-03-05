@@ -1,0 +1,98 @@
+.m-footer {
+    background-color: $purple;
+    min-height: 20vh;
+    position: relative;
+    z-index: 2;
+    padding: 50px 0;
+
+    h3 {
+        font-family: 'Playfair Display';
+        font-weight: bold;
+        margin: 0;
+        font-size: 30px;
+        text-align: center;
+        color: $white;
+    }
+
+    p {
+        margin: 20px auto;
+        font-size: 20px;
+        text-align: center;
+        color: $white;
+        max-width: 400px;
+    }
+
+    a {
+        color: $white;
+    }
+
+    &__creators {
+        width: 910px;
+        margin: 50px auto;
+
+        @media (max-width: 930px) {
+            width: auto;
+        }
+
+        &__item {
+            display: inline-block;
+            text-align: center;
+            width: 200px;
+            margin: 0 50px;
+
+            @media (max-width: 930px) {
+                display: block;
+                margin: 60px auto;
+                width: auto;
+            }
+
+            &__image {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                background-position: center;
+                background-size: cover;
+                -webkit-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.15);
+                -moz-box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.15);
+                box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.15);
+
+                @media (max-width: 930px) {
+                    margin: 0 auto;
+                }
+            }
+            &__name {
+                margin-top: 20px;
+                color: $white;
+                font-family: 'Montserrat';
+                font-size: 25px;
+                font-weight: bold;
+            }
+            &__links {
+                margin-top: 10px;
+
+                img {
+                    margin: 0 10px;
+                    width: 45px;
+                }
+            }
+
+            &:nth-of-type(1) {
+                .m-footer__creators__item__image{
+                    background-image: url(/images/victor.jpg);
+                }
+            }
+
+            &:nth-of-type(2) {
+                .m-footer__creators__item__image{
+                    background-image: url(/images/bjorn.jpg);
+                }
+            }
+
+            &:nth-of-type(3) {
+                .m-footer__creators__item__image{
+                    background-image: url(/images/nathan.jpg);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+<%- include('partials/shared/html-open.ejs'); %>
+<%- include('partials/globals/header.ejs'); %>
+
+<main>
+    <div class="p-profile">
+        <form class="profile__edit__form m-form" id="edit_profile" action="/profile" method="POST">
+            <legend>My profile</legend>
+            <div class="p-profile__avatar" style="background-image: url(<%= user.avatar %>)">
+            </div>
+            <span class="sign-up--failed">The username <span
+                    class="takenUsername"><% if (locals.data) { %><%= data.editUser %><% } %></span> is
+                already taken, please choose a different one.</span>
+            <label class="edit-label" for="editUser">Username</label>
+            <p><%= user.username %></p>
+            <input class="no-error" type="text" name="editUser" id="editUser" value="<%= user.username %>">
+            <label class="edit-label" for="editLocation">Location</label>
+            <p><%= user.location %></p>
+            <input class="no-error" type="text" name="editLocation" id="editLocation" value="<%= user.location %>">
+            <label class="edit-label" for="editInterests">Interests</label>
+            <div class="tag-container tag-container-profile">
+                <% for (let i = 0; i < user.interests.length; i++) { %>
+                <div class="tag"><span class="interestitem"><%= user.interests[i] %></span>
+                    <p class="close-button" data-item="<%= user.interests[i] %>">x</p>
+                </div>
+                <% } %>
+                <input id="signupInterestsTags" placeholder="Interests" onkeydown="return event.key != 'Enter';">
+            </div>
+            <input name="editInterests" id="editInterests" type="text">
+            <div class="tag-button">Add tag</div>
+            <label class="edit-label" for="editDescription">Description</label>
+            <p><%= user.description %></p>
+            <textarea name="editDescription" id="editDescription" cols="30" rows="10"><%= user.description %></textarea>
+            <button class="profile__save">Save changes</button>
+            <div class="profile__edit"><svg>
+                    <path
+                        d="M25.6167695,12.7520919 C26.26541,12.1034515 27.210824,11.8501285 28.0968833,12.0875474 C28.9829426,12.3249663 29.6750337,13.0170574 29.9124526,13.9031167 C30.1498715,14.789176 29.8965485,15.73459 29.2479081,16.3832305 L16.9928155,28.638323 L12,30 L13.361677,25.0071845 L25.6167695,12.7520919 Z"
+                        id="Path"></path>
+                </svg>Edit profile</div>
+        </form>
+    </div>
+</main>
+
+<%- include('partials/shared/html-close.ejs'); %>

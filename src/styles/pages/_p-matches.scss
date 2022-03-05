@@ -1,0 +1,43 @@
+.p-matches {
+    width: 100%;
+    padding: 50px 30px;
+    min-height: 80vh;
+    position: relative;
+    z-index: 1;
+
+    .m-users {
+        padding: 80px;
+
+        @media (max-width: 570px) {
+            padding: 40px;
+        }
+    }
+
+    .go-home {
+        font-family: 'Montserrat';
+        text-align: center;
+        padding-top: 7px;
+        font-size: 25px;
+        margin-top: 30px;
+        height: 50px;
+        border-radius: 6px;
+        color: $white;
+        background-color: $purple;
+        border: 3px solid $purple;
+        transition: all 200ms ease-in-out;
+        display: block;
+        width: 360px;
+
+        &:hover {
+            background-color: $white;
+            color: $purple;
+            cursor: pointer;
+        }
+
+        @media (max-width: 570px) {
+            font-size: 20px;
+            width: 220px;
+            height: 70px;
+        }
+    }
+}

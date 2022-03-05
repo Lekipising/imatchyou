@@ -1,0 +1,38 @@
+<%- include('partials/shared/html-open.ejs'); %>
+<%- include('partials/globals/header.ejs'); %>
+
+<main>
+    <div class="p-matches">
+        <div class="m-users">
+            <div class="user-container">
+                <% if (locals.data != '') { %>
+                <h2>Your matches</h2>
+                <p>These are your matches, you have both liked each other. Go to his/her profile and send them a
+                    message!</p>
+                <% for (let i = 0; i < data.length; i++) { %>
+                <div class="user">
+                    <a href="/otherprofile/<%= data[i].username %>">
+                        <div class="user__image"
+                            style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.35)), url(<%= data[i].avatar %>)">
+                        </div>
+                        <h4>
+                            <%= data[i].firstname %>
+                        </h4>
+                        <p>
+                            <%= data[i].location %>
+                        </p>
+                    </a>
+                </div>
+                <% } %>
+                <% } if (locals.data == ''){ %>
+                    <h2>You have no matches yet</h2>
+                    <p>You can get matches to like someones profile</p>
+                    <a class="go-home" href="/">See interesting profiles</a>
+                    <% } %>
+            </div>
+        </div>
+       
+    </div>
+</main>
+
+<%- include('partials/shared/html-close.ejs'); %>

@@ -1,0 +1,58 @@
+.p-login {
+    width: 100%;
+    padding: 50px 30px;
+    min-height: 80vh;
+    position: relative;
+    z-index: 1;
+
+    .m-form {
+        max-width: 500px;
+    }
+
+    &__form {
+        animation: slideIn 600ms ease-in-out forwards;
+
+        button {
+            animation: slideIn 650ms ease-in-out forwards;
+        }
+    }
+
+    &__banner {
+        max-width: 500px;
+        margin: 0 auto 80px;
+        animation: slideIn 400ms ease-in-out forwards;
+
+        h1 {
+            font-family: 'Playfair Display';
+            font-weight: bold;
+            font-size: 44px;
+        }
+
+        button {
+            font-family: 'Montserrat';
+            width: 120px;
+            height: 50px;
+            border-radius: 6px;
+            color: $purple;
+            background-color: transparent;
+            border: 3px solid $purple;
+            transition: all 200ms ease-in-out;
+            animation: slideIn 450ms ease-in-out forwards;
+    
+            &:hover {
+                background-color: $purple;
+                color: $white;
+                cursor: pointer;
+            }
+        }
+    }
+
+    @keyframes slideIn {
+        0% {
+            transform: translateX(-100vw);
+        }
+        100% {
+            transform: translateX(0vw);
+        }
+    }
+}

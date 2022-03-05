@@ -1,0 +1,35 @@
+<div class="m-category">
+    <div class="m-category__info">
+        <div class="m-category__info__container">
+            <h3 id="weatherHeaderSection" class="m-category__title"></h3>
+            <img id="weatherStatusImage" class="m-category__icon" src="images/cloud-sun.svg" alt="">
+            <span id="viewTemperature" class="m-category__weather-message"></span>
+            <h2 id="weatherStatus" class="m-category__weather-message-2"></h2>
+            <p id="sectionIntroduction" class="m-category__text"></p>
+        </div>
+    </div>
+    <div id="sectionImage" class="m-category__image" style="background-image: url(/images/boardgames.jpg);">
+    </div>
+</div>
+
+<div class="m-users">
+    <p class="userLocation"><%= user.location %></p>
+    <h2 id="weatherHeader"></h2>
+    <div class="user-container">
+      <% for (let i = 0; i < dataWeather.length; i++) { %>
+      <a href="/otherprofile/<%= dataWeather[i].username %>">
+        <div class="user">
+          <div class="user__image"
+            style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.35)), url(<%= dataWeather[i].avatar %>)">
+          </div>
+          <h4>
+            <%= dataWeather[i].firstname %>
+          </h4>
+          <p>
+            <%= dataWeather[i].location %>
+          </p>
+        </div>
+      </a>
+      <% } %>
+    </div>
+  </div>
